@@ -58,9 +58,9 @@ License and Author
 
 |                      |                                                    |
 |:---------------------|:---------------------------------------------------|
-| **Author**           | YOUR_NAME (<YOUR_EMAIL>)                           |
+| **Author**           | Paul Czarkowski (<username.taken@gmail.com>)                           |
 |                      |                                                    |
-| **Copyright**        | Copyright (c) 2013, YOUR_ORG                       |
+| **Copyright**        | Copyright (c) 2013, Paul Czarkowski                       |
 
 
 Licensed under the Apache License, Version 2.0 (the "License");

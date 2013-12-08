@@ -1,37 +1,41 @@
-MEEZ
-====
-
-Mise en place
--------------
-
-"Mise en place - (pronounced meez en plas) is a French phrase which means "putting in place", as in set up. It is used in professional kitchens to refer to organizing and arranging the ingredients (e.g., cuts of meat, relishes, sauces, par-cooked items, spices, freshly chopped vegetables, and other components) that a cook will require for the menu items that he or she expects to prepare during his/her shift. The practice is also effective in home kitchens.
-
-Recipes are reviewed to check for necessary ingredients and equipment. Ingredients are measured out, washed, chopped, and placed in individual bowls. Equipment, such as spatulas and blenders, are prepared for use, and ovens are preheated. Preparing the mise en place ahead of time allows the chef to cook without having to stop and assemble items, which is desirable in recipes with time constraints." - http://en.wikipedia.org/wiki/Mise_en_place
-
-
-
 Description
 ===========
 
-This cookbook installs XXXXXXXXXXXXXXXXXXX
+This cookbook installs the IRC as a Service application
 
-http://<PROJECT_URL>
+http://github.com/paulczar/ircaas
 
 Requirements
 ==============
 
-Chef 0.10.0 or higher required (for Chef environment use).
+Chef 0.11.0 or higher required (for Chef environment use).
 
 Cookbooks
----------
+----------------
 
 The following cookbooks are dependencies:
+* apt
+* ruby
+* git
+* docker
 
 Recipes
 =======
 
+ircaas::application
+---------------------------
+
+* creates user `ircaas`
+* includes recipes `git::default`, `ruby::default`, `docker::default`, `application_ruby::default`
+* Install supporting packages
+* Install IRCaaS Application code from `https://github.com/paulczar/ircaas`
+
 Attributes
 ==========
+ircaas['user']  - user to run application as
+ircaas['git']['repo']  - repo containing IRCaaS code
+ircaas['git']['branch'] - Branch to download
+
 
 Testing
 =======
